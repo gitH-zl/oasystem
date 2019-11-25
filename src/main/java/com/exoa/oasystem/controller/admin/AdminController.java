@@ -1,9 +1,10 @@
-package com.exoa.oasystem.controller;
+package com.exoa.oasystem.controller.admin;
 
 import com.exoa.oasystem.constant.WebConst;
+import com.exoa.oasystem.controller.BaseController;
 import com.exoa.oasystem.exception.TipException;
-import com.exoa.oasystem.pojo.BO.RestResponseBo;
-import com.exoa.oasystem.pojo.VO.UserVo;
+import com.exoa.oasystem.modal.BO.RestResponseBo;
+import com.exoa.oasystem.modal.VO.UserVo;
 import com.exoa.oasystem.server.IUserService;
 import com.exoa.oasystem.utils.TaleUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping("/admin")
 @Transactional(rollbackFor = TipException.class)
-public class AdminController extends BaseController{
+public class AdminController extends BaseController {
     @Resource
     private IUserService usersService;
 

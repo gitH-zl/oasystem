@@ -5,7 +5,7 @@ package com.exoa.oasystem.interceptor;
  */
 
 import com.exoa.oasystem.constant.WebConst;
-import com.exoa.oasystem.pojo.VO.UserVo;
+import com.exoa.oasystem.modal.VO.UserVo;
 import com.exoa.oasystem.utils.TaleUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

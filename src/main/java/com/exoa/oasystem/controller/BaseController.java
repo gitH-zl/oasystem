@@ -1,6 +1,6 @@
 package com.exoa.oasystem.controller;
 
-import com.exoa.oasystem.pojo.VO.UserVo;
+import com.exoa.oasystem.modal.VO.UserVo;
 import com.exoa.oasystem.utils.MapCache;
 import com.exoa.oasystem.utils.TaleUtils;
 

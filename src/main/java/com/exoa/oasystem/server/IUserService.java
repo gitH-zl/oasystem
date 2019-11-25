@@ -1,6 +1,6 @@
 package com.exoa.oasystem.server;
 
-import com.exoa.oasystem.pojo.VO.UserVo;
+import com.exoa.oasystem.modal.VO.UserVo;
 
 /**
  * Created by BlueT on 2017/3/3.

@@ -3,7 +3,7 @@ package com.exoa.oasystem.interceptor;
 
 import com.exoa.oasystem.constant.WebConst;
 import com.exoa.oasystem.dto.Types;
-import com.exoa.oasystem.pojo.VO.UserVo;
+import com.exoa.oasystem.modal.VO.UserVo;
 import com.exoa.oasystem.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

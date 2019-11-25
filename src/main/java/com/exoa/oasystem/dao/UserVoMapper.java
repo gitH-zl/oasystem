@@ -1,7 +1,7 @@
 package com.exoa.oasystem.dao;
 
-import com.exoa.oasystem.pojo.VO.UserVo;
-import com.exoa.oasystem.pojo.VO.UserVoExample;
+import com.exoa.oasystem.modal.VO.UserVo;
+import com.exoa.oasystem.modal.VO.UserVoExample;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 

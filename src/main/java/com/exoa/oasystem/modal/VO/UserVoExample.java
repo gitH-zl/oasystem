@@ -1,4 +1,4 @@
-package com.exoa.oasystem.pojo.VO;
+package com.exoa.oasystem.modal.VO;
 
 import java.util.ArrayList;
 import java.util.List;

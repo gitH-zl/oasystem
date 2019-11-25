@@ -18,7 +18,7 @@ import java.nio.charset.Charset;
  * @date 2019/7/17  14:32
  * @Description: TODO
  */
-@Component
+//@Component
 public class MvcAdapter extends WebMvcConfigurationSupport {
     @Resource
     private TimeCostInterceptor timeCostInterceptor;

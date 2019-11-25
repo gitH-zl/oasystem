@@ -2,8 +2,8 @@ package com.exoa.oasystem.server.impl;
 
 import com.exoa.oasystem.dao.UserVoMapper;
 import com.exoa.oasystem.exception.TipException;
-import com.exoa.oasystem.pojo.VO.UserVo;
-import com.exoa.oasystem.pojo.VO.UserVoExample;
+import com.exoa.oasystem.modal.VO.UserVo;
+import com.exoa.oasystem.modal.VO.UserVoExample;
 import com.exoa.oasystem.server.IUserService;
 import com.exoa.oasystem.utils.TaleUtils;
 import org.apache.commons.lang3.StringUtils;

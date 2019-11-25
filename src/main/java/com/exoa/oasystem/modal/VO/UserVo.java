@@ -1,4 +1,4 @@
-package com.exoa.oasystem.pojo.VO;
+package com.exoa.oasystem.modal.VO;
 
 import java.io.Serializable;
 

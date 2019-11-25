@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * 向mvc中添加自定义组件
  * Created by BlueT on 2017/3/9.
  */
-//@Component
+@Component
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Resource
     private BaseInterceptor baseInterceptor;

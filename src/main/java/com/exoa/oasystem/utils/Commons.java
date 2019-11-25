@@ -2,6 +2,9 @@ package com.exoa.oasystem.utils;
 
 
 import com.exoa.oasystem.constant.WebConst;
+import com.exoa.oasystem.modal.VO.CommentVo;
+import com.exoa.oasystem.modal.VO.ContentVo;
+import com.exoa.oasystem.server.ISiteService;
 import com.github.pagehelper.PageInfo;
 import com.vdurmont.emoji.EmojiParser;
 import org.apache.commons.lang3.StringUtils;
@@ -24,15 +27,15 @@ import java.util.regex.Pattern;
 @Component
 public final class Commons {
 
-   // private static ISiteService siteService;
+    private static ISiteService siteService;
 
     public static String THEME = "themes/default";
 
     private static final List EMPTY = new ArrayList(0);
 
-//    public static void setSiteService(ISiteService ss) {
-//        siteService = ss;
-//    }
+    public static void setSiteService(ISiteService ss) {
+        siteService = ss;
+    }
 
 
     /**
@@ -168,9 +171,9 @@ public final class Commons {
      * @param contents
      * @return
      */
-//    public static String permalink(ContentVo contents) {
-//        return permalink(contents.getCid(), contents.getSlug());
-//    }
+    public static String permalink(ContentVo contents) {
+        return permalink(contents.getCid(), contents.getSlug());
+    }
 
 
     /**
@@ -295,12 +298,12 @@ public final class Commons {
      *
      * @return
      */
-//    public static String show_thumb(ContentVo contents) {
-//        int cid = contents.getCid();
-//        int size = cid % 20;
-//        size = size == 0 ? 1 : size;
-//        return "/user/img/rand/" + size + ".jpg";
-//    }
+    public static String show_thumb(ContentVo contents) {
+        int cid = contents.getCid();
+        int size = cid % 20;
+        size = size == 0 ? 1 : size;
+        return "/user/img/rand/" + size + ".jpg";
+    }
 
     /**
      * 最新文章
@@ -308,12 +311,12 @@ public final class Commons {
      * @param limit
      * @return
      */
-//    public static List<ContentVo> recent_articles(int limit) {
-//        if (null == siteService) {
-//            return EMPTY;
-//        }
-//        return siteService.recentContents(limit);
-//    }
+    public static List<ContentVo> recent_articles(int limit) {
+        if (null == siteService) {
+            return EMPTY;
+        }
+        return siteService.recentContents(limit);
+    }
 
     /**
      * 最新评论
@@ -321,48 +324,48 @@ public final class Commons {
      * @param limit
      * @return
      */
-//    public static List<CommentVo> recent_comments(int limit) {
-//        if (null == siteService) {
-//            return EMPTY;
-//        }
-//        return siteService.recentComments(limit);
-//    }
+    public static List<CommentVo> recent_comments(int limit) {
+        if (null == siteService) {
+            return EMPTY;
+        }
+        return siteService.recentComments(limit);
+    }
 
     /**
      * 获取分类列表
      *
      * @return
      */
-//    public static List<MetaDto> categries(int limit) {
-//        return siteService.metas(Types.CATEGORY.getType(), null, limit);
-//    }
+ //   public static List<MetaDto> categries(int limit) {
+ //       return siteService.metas(Types.CATEGORY.getType(), null, limit);
+  //  }
 
     /**
      * 获取所有分类
      *
      * @return
      */
-//    public static List<MetaDto> categries() {
-//        return categries(WebConst.MAX_POSTS);
-//    }
+  //  public static List<MetaDto> categries() {
+ //       return categries(WebConst.MAX_POSTS);
+ //   }
 
     /**
      * 获取标签列表
      *
      * @return
      */
-//    public static List<MetaDto> tags(int limit) {
-//        return siteService.metas(Types.TAG.getType(), null, limit);
-//    }
+  //  public static List<MetaDto> tags(int limit) {
+    //    return siteService.metas(Types.TAG.getType(), null, limit);
+   // }
 
     /**
      * 获取所有标签
      *
      * @return
      */
-//    public static List<MetaDto> tags() {
-//        return tags(WebConst.MAX_POSTS);
-//    }
+   // public static List<MetaDto> tags() {
+ //       return tags(WebConst.MAX_POSTS);
+ //   }
 
     /**
      * 获取评论at信息
@@ -370,13 +373,13 @@ public final class Commons {
      * @param coid
      * @return
      */
-//    public static String comment_at(Integer coid) {
-//        CommentVo comments = siteService.getComment(coid);
-//        if (null != comments) {
-//            return "<a href=\"#comment-" + coid + "\">@" + comments.getAuthor() + "</a>";
-//        }
-//        return "";
-//    }
+    public static String comment_at(Integer coid) {
+        CommentVo comments = siteService.getComment(coid);
+        if (null != comments) {
+            return "<a href=\"#comment-" + coid + "\">@" + comments.getAuthor() + "</a>";
+        }
+        return "";
+    }
 
     /**
      * An :grinning:awesome :smiley:string &#128516;with a few :wink:emojis!

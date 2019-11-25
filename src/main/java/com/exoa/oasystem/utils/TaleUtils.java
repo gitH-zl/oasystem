@@ -1,8 +1,9 @@
 package com.exoa.oasystem.utils;
 
 import com.exoa.oasystem.constant.WebConst;
+import com.exoa.oasystem.controller.admin.AttachController;
 import com.exoa.oasystem.exception.TipException;
-import com.exoa.oasystem.pojo.VO.UserVo;
+import com.exoa.oasystem.modal.VO.UserVo;
 import org.apache.commons.lang3.StringUtils;
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
@@ -242,11 +243,11 @@ public class TaleUtils {
      * @return cookie
      */
     private static Cookie cookieRaw(String name, HttpServletRequest request) {
-        javax.servlet.http.Cookie[] servletCookies = request.getCookies();
+        Cookie[] servletCookies = request.getCookies();
         if (servletCookies == null) {
             return null;
         }
-        for (javax.servlet.http.Cookie c : servletCookies) {
+        for (Cookie c : servletCookies) {
             if (c.getName().equals(name)) {
                 return c;
             }
@@ -422,9 +423,9 @@ public class TaleUtils {
 
     public static String getFileKey(String name) {
         String prefix = "/upload/" + DateKit.dateFormat(new Date(), "yyyy/MM");
-//        if (!new File(AttachController.CLASSPATH + prefix).exists()) {
-//            new File(AttachController.CLASSPATH + prefix).mkdirs();
-//        }
+        if (!new File(AttachController.CLASSPATH + prefix).exists()) {
+            new File(AttachController.CLASSPATH + prefix).mkdirs();
+        }
 
         name = StringUtils.trimToNull(name);
         if (name == null) {

@@ -1,4 +1,4 @@
-package com.exoa.oasystem.pojo.BO;
+package com.exoa.oasystem.modal.BO;
 
 /**
  * rest返回对象
